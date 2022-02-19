@@ -14,9 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'Laravel RestAPI';
 });
-// Call Controller
-Route::get('/user', [UserController::class, 'index']);
-
-// Route::get('post/{slug}')
