@@ -1,15 +1,30 @@
-import React, { useEffect } from 'react'
-import { useState} from 'react'
+import React from 'react'
+import { useState, useEffect} from 'react'
+import axios from "axios";
+
 export default function Contract() {
   const [address, setAddress] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [map,setMap] = useState('');
   useEffect(() => {
-    setAddress("158 m4 \n ngam");
-    setEmail("famp.visarut@gmail.com");
-    setPhone('0647163925')
-    setMap('https://www.google.com/maps/embed/v1/place?q=17.100871039435724,+104.67563807016795&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8')
+    axios
+    .get("http://127.0.0.1:8000/api/contact", {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+    .then((res) => res.data)
+    .then((data) => {
+      setAddress(data.address);
+      setEmail(data.email);
+      setPhone(data.phone);
+      setMap(data.map)
+    });
+    // setAddress("158 m4 \n ngam");
+    // setEmail("famp.visarut@gmail.com");
+    // setPhone('0647163925')
+    // setMap('https://www.google.com/maps/embed/v1/place?q=17.100871039435724,+104.67563807016795&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8')
   },[])
 
   return (

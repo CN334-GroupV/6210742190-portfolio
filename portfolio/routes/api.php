@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
-use App\Http\Controllers\ContractController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SkillController;
 use Illuminate\Http\Request;
@@ -26,9 +26,9 @@ Route::get('/about',[AboutController::class,'get']);
 Route::put('/about',[AboutController::class,'put']);
 Route::post('/about',[AboutController::class,'post']);
 
-Route::get('/contract',[ContractController::class,'get']);
-Route::put('/contract',[ContractController::class,'put']);
-Route::post('/contract',[ContractController::class,'post']);
+Route::get('/contact',[ContactController::class,'get']);
+Route::put('/contact',[ContactController::class,'put']);
+Route::post('/contact',[ContactController::class,'post']);
 
 Route::get('/project',[ProjectController::class,'get']);
 Route::put('/project/{id}',[ProjectController::class,'put']);
