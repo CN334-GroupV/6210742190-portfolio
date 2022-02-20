@@ -14,7 +14,7 @@ return [
     */
 
     'default' => env('FILESYSTEM_DISK', 'local'),
-
+    'links' => [public_path('products')=> storage_path('app/products'),],
     /*
     |--------------------------------------------------------------------------
     | Filesystem Disks

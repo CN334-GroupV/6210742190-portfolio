@@ -17,11 +17,12 @@ class ProjectController extends Controller
     }
     public function put(Request $request,$id){
         $project = Project::find($id);
+
         $project->title =$request->input('title');
         $project->subtitle =$request->input('subtitle');
         $project->description =$request->input('description');
-        $project->image =$request->input('image');
         $project->link =$request->input('link');
+
         $project->save();
         return response()->json($project);
 
@@ -31,8 +32,8 @@ class ProjectController extends Controller
         $project->title =$request->input('title');
         $project->subtitle =$request->input('subtitle');
         $project->description =$request->input('description');
-        $project->image =$request->input('image');
         $project->link =$request->input('link');
+
         $project->save();
         return response()->json($project);
 

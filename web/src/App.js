@@ -13,6 +13,9 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Dashboard}></Route>
+          {/* <Route path="/edit">
+            <Edit/>
+          </Route> */}
           <Route path="/edit/about">
             <Navbar />
             <EditAbout />

@@ -6,7 +6,6 @@ export default function About() {
   const [name, setName] = useState("");
   const [greeting, setGreeting] = useState("");
   const [description, setDescription] = useState("");
-
   useEffect(() => {
     axios
       .get("http://127.0.0.1:8000/api/about", {
@@ -16,6 +15,7 @@ export default function About() {
       })
       .then((res) => res.data)
       .then((data) => {
+        // console.log(data);
         setName(data.name);
         setGreeting(data.greeting);
         setDescription(data.description);
@@ -51,7 +51,7 @@ export default function About() {
           <img
             className="object-cover object-center rounded"
             alt="hero"
-            src="../logo192.png"
+            src="./profile.jpg"
           />
         </div>
       </div>
