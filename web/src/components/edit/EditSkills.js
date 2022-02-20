@@ -40,7 +40,9 @@ function EditSkills() {
   return (
     <div class="col-12" style={{ paddingTop: "10vh" }}>
       <div class="input-group input-group-lg w-50 mx-auto">
+
         <div>
+      <h1 style={{fontSize:"30px"}}>Edit Skills</h1>
           <InputGroup className="mb-5">
           <Button variant="outline-success" onClick={handleAdd}>
             Add Skill

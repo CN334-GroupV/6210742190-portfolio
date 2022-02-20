@@ -61,10 +61,10 @@ function SkillRow(props) {
           />
         </InputGroup>
         </td>
-        <td>
-          <button onClick={handleEdit}> {(disabled)? "Edit":"save"} </button>{' '}
-          <button onClick={handleDelete}>Delete</button>
-        </td>
+        <td className="flex" style={{paddingLeft: '20px'}}>
+        <button className="btn btn-warning" onClick={handleEdit}> {disabled ? "Edit" : "save"} </button>&nbsp;&nbsp;
+        <button className="btn btn-danger" onClick={handleDelete}>Delete</button>
+      </td>
     </tr>
   );
 }

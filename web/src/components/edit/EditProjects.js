@@ -48,6 +48,8 @@ function EditProjects() {
   return (
     <div class="col-12" style={{ paddingTop: "10vh"}}>
       <div class=" input-group-lg w-50 mx-auto">
+      <h1 style={{fontSize:"30px"}}>Edit Projects</h1>
+
         <div>
           <InputGroup className="mb-2">
           <InputGroup.Text id="basic-addon1">Title</InputGroup.Text>

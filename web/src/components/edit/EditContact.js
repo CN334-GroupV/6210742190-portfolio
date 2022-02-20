@@ -35,13 +35,15 @@ function EditContract() {
         map:map,
       }),
     };
-    fetch("http://127.0.0.1:8000/api/about", requestOptions).then((res) => {
+    fetch("http://127.0.0.1:8000/api/contact", requestOptions).then((res) => {
       console.log(res.status);
     });
   };
   return (
     <div class="col-12" style={{ paddingTop: "10vh" }}>
       <div class="input-group input-group-lg w-50 mx-auto">
+      <h1 style={{fontSize:"30px"}}>Edit Contact</h1>
+
         <InputGroup className="mb-3">
           <InputGroup.Text id="basic-addon1">Address</InputGroup.Text>
           <FormControl
